@@ -1,0 +1,118 @@
+:root {
+    --miel-claro: #f4b400;
+    --miel: #d99800;
+    --miel-oscuro: #b57600;
+    --gris-oscuro: #222;
+    --gris: #333;
+    --blanco: #fff;
+    --miel-transparente: #ffe6aa;
+}
+
+.producto-detalle {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 120px 20px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.imagen-principal img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.miniaturas {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.miniaturas img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.05);
+}
+
+.producto-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--miel-oscuro);
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.caracteristicas {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.caracteristicas li {
+    margin-bottom: 10px;
+}
+
+.botones-producto {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp,
+.btn-email {
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 30px;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+}
+
+.btn-email {
+    background: var(--miel-oscuro);
+}
+
+.descripcion-larga {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px 80px;
+}
+
+.descripcion-larga h2 {
+    margin-bottom: 20px;
+}
+
+.descripcion-larga p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+
+    .producto-detalle {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-info h1 {
+        font-size: 2rem;
+    }
+}
